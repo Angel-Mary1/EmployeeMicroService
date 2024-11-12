@@ -8,10 +8,16 @@ public interface StudentService {
 
     public StudentDTO createStudent(StudentDTO employeeDTO);
 
-    public StudentDTO getEmployeeById(Long employeeId);
+    public StudentDTO getStudentById(Long employeeId);
 
-    public List<StudentDTO> getAllEmployees();
+    public List<StudentDTO> getAllStudents();
 
 
     public void sendEmail(Long employeeId);
+
+    StudentDTO getStudentByIdAndName(Long studentId, String studentName);
+
+    StudentDTO getStudentByIdOrLastName(Long studentId, String studentLastName);
+
+    List<StudentDTO> top3By(String by);
 }

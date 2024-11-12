@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+
 @RestController
 @RequestMapping("/api/account/student")
 public class AccountController {
@@ -32,8 +34,6 @@ public class AccountController {
     {
         return new ResponseEntity<>(accountService.addAccountDetail(account),HttpStatus.OK);
     }
-
-
 
 
 }

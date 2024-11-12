@@ -10,6 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+//basic Authentication check
+
 @Slf4j
 public class BasicAuthHandlerInterceptor implements HandlerInterceptor {
 

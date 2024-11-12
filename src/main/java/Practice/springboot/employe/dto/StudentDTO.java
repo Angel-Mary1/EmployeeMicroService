@@ -1,5 +1,6 @@
 package Practice.springboot.employe.dto;
 
+import Practice.springboot.employe.entity.Student;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,5 +17,10 @@ public class StudentDTO {
     private String lastName;
     private String emailId;
 
-
+    public StudentDTO(Student student) {
+        this.id = student.getId();
+        this.firstName = student.getFirstName();
+        this.lastName = student.getLastName();
+        this.emailId = student.getEmailId();
+    }
 }
