@@ -22,6 +22,6 @@ public class WebMvcConfig implements WebMvcConfigurer
 
         //for particular end point hit use addPathPatterns
 
-        registry.addInterceptor(new BasicAuthHandlerInterceptor()).order(1).addPathPatterns("/api/student");
+//        registry.addInterceptor(new BasicAuthHandlerInterceptor()).order(1).addPathPatterns("/api/student");
     }
 }
