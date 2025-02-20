@@ -18,6 +18,12 @@ public class OrderController {
         this.orderService = orderService;
     }
 
+    @GetMapping("/get/all")
+    public List<Customer> getAllCustomers(){
+
+        return orderService.findAllCustomers();
+    }
+
     @GetMapping("/get/customer")
     public List<Customer> getAllCustomer(){
 
@@ -26,7 +32,7 @@ public class OrderController {
 
     @PostMapping ("/add/customer")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer){
+    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) throws Exception{
 
         return new ResponseEntity<>(orderService.createCustomer(customer), HttpStatus.CREATED);
     }

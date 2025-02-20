@@ -27,7 +27,7 @@ public class Customer {
     @Column(name="age")
     private String age;
 
-   @OneToMany( targetEntity = Product.class, cascade = CascadeType.ALL)
+   @OneToMany( targetEntity = Product.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn( name="customer_id", referencedColumnName ="id")
     private List<Product> products;
 
